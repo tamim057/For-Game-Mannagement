@@ -328,10 +328,6 @@ form.addEventListener("submit", async e => {
     showStatus("bad", "Registration is not connected yet. The site owner needs to add the Google Apps Script URL.");
     return;
   }
-  if (getRegistered().includes(data.account)) {
-    showStatus("bad", "This account number was already registered from this browser.");
-    return;
-  }
 
   setLoading(true);
   statusEl.className = "status";
